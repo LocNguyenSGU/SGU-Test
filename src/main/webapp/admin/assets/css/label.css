@@ -1,0 +1,15 @@
+.lb-IN_PROGRESS {
+  padding: 5px 10px;
+  border-radius: 10px;
+  background-color:  #66CC66;
+}
+.lb-COMPLETED {
+  padding: 5px 10px;
+  border-radius: 10px;
+  background-color:  #3399FF;
+}
+.lb-NOT_STARTED {
+  padding: 5px 10px;
+  border-radius: 10px;
+  background-color: #ccc;
+}

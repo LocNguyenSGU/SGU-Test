@@ -1,0 +1,8 @@
+.selection{
+    witdh:400px;
+    background-color: white;padding:5px;
+    height:40px;
+    border:1px solid rgb(181, 185, 222);
+    font-family: Ubuntu, sans-serif;
+    font-weight:700;
+}

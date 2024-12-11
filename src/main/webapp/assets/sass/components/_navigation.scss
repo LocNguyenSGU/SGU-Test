@@ -1,0 +1,142 @@
+.navigation {
+  position         : fixed;
+  top              : 0;
+  left             : 0;
+  width            : 30rem;
+  height           : 100vh;
+  background-image : linear-gradient(100deg, $color-secondary, $color-secondary-shade-1);
+  color            : $color-white;
+  transition       : all .3s;
+
+  &__item {
+    position                  : relative;
+    padding                   : 0 0 0 $space-medium-small;
+    border-top-left-radius    : 10rem;
+    border-bottom-left-radius : 10rem;
+    height                    : 6rem;
+
+    &:hover, &--hovered {
+      background-color : #f0f0f0;
+      color            : $color-secondary-shade-1;
+
+      &::before, &::after {
+        content          : "";
+        position         : absolute;
+        right            : 0;
+        width            : 5rem;
+        height           : 5rem;
+        background-color : transparent;
+        border-radius    : 50%;
+        pointer-events   : none;
+        z-index          : -1;
+      }
+
+      &::before {
+        top        : -5rem;
+        box-shadow : 3rem 3rem 0 1rem $color-secondary-tint-2;
+      }
+
+      &::after {
+        bottom     : -5rem;
+        box-shadow : 3rem -3rem 0 1rem $color-secondary-tint-2;
+      }
+    }
+  }
+
+  &__link {
+    display         : inline-flex;
+    height          : 100%;
+    width           : 100%;
+    position        : relative;
+    justify-content : flex-start;
+    align-items     : center;
+    color           : inherit;
+    text-decoration : none;
+  }
+
+  &__icon-box {
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+  }
+
+  &__icon {
+    font-size : $size-large;
+
+    &--menu {
+      color : $color-secondary-shade-1;
+    }
+  }
+
+  &__title {
+    display     : inline-block;
+    line-height : 1;
+    margin-left : $space-medium-small;
+    text-align  : start;
+    white-space : nowrap;
+  }
+
+  &__btn-toggle {
+    display : inline-block;
+    height  : 100%;
+  }
+
+  &__toggle {
+    width : 8rem;
+  }
+
+  &__toggle &__title, &__toggle h1, &__toggle &__info {
+    visibility : hidden;
+  }
+
+  &__info {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    padding: $space-very-small $space-medium-small;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: $space-extremely-small;
+    width: 100%;
+
+    font-size: $size-very-small;
+
+    &--author {
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    &--list {
+      height: 3rem;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      transform: translate(-5px, -8px);
+    }
+
+    &--item {
+      text-decoration: none;
+      display: inline-flex;
+      height: 3rem;
+      width: 3rem;
+      justify-content: center;
+      align-items: center;
+
+      i {
+        font-size: $size-medium;
+        color: $color-white;
+      }
+    }
+
+    &--quote {
+      line-height: 1.05;
+      font-weight: 400;
+      font-style: italic;
+      letter-spacing: 1.5px;
+    }
+  }
+}

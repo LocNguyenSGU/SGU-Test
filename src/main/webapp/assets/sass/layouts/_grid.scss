@@ -1,0 +1,48 @@
+.grid {
+  display : grid;
+}
+
+.grid--2-cols {
+  grid-template-columns : 1fr 1fr;
+}
+
+.grid--3-cols {
+  grid-template-columns : repeat(3, 1fr);
+}
+
+.grid--4-cols {
+  grid-template-columns : repeat(4, 1fr);
+}
+
+.grid__gap--small {
+  gap : $space-small;
+}
+
+.grid__gap--medium {
+  gap : $space-medium;
+}
+
+.grid__gap--large {
+  gap : $space-large;
+}
+
+.grid__gap-column--medium {
+  column-gap : $space-medium;
+}
+
+.grid__gap-column--large {
+  column-gap : $space-large;
+}
+
+
+.flex-1 {
+  flex : 1;
+}
+
+.flex-justify-content-start {
+  justify-content : flex-start;
+}
+
+.flex-align-items-center {
+  align-items : center;
+}

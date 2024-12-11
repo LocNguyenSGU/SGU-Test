@@ -1,0 +1,132 @@
+.u-center-text {
+  text-align : center;
+}
+
+.u-font-weight-500 {
+  font-weight : 400;
+}
+
+.u-margin-bottom-extremely-small {
+  margin-bottom : $space-extremely-small;
+}
+
+.u-margin-bottom-very-small {
+  margin-bottom : $space-very-small;
+}
+
+.u-margin-bottom-small {
+  margin-bottom : $space-small;
+}
+
+.u-margin-bottom-medium-small {
+  margin-bottom : $space-medium-small;
+}
+
+.u-margin-bottom-medium {
+  margin-bottom : $space-medium;
+}
+
+.u-margin-bottom-medium-large {
+  margin-bottom : $space-medium-large;
+}
+
+.u-margin-bottom-large {
+  margin-bottom : $space-large;
+}
+
+.u-margin-bottom-very-large {
+  margin-bottom : $space-very-large;
+}
+
+.u-margin-top-extremely-small {
+  margin-top : $space-extremely-small;
+}
+
+.u-margin-top-very-small {
+  margin-top : $space-very-small;
+}
+
+.u-margin-top-small {
+  margin-top : $space-small;
+}
+
+.u-margin-top-medium-small {
+  margin-top : $space-medium-small;
+}
+
+.u-margin-top-medium {
+  margin-top : $space-medium;
+}
+
+.u-margin-top-medium-large {
+  margin-top : $space-medium-large;
+}
+
+.u-margin-top-large {
+  margin-top : $space-large;
+}
+
+.u-margin-top-very-large {
+  margin-top : $space-very-large;
+}
+
+.u-margin-right-very-small {
+  margin-right : $space-very-small;
+}
+
+.u-margin-right-small {
+  margin-right : $space-small;
+}
+
+.u-margin-right-medium {
+  margin-right : $space-medium;
+}
+
+.column-count-2 {
+  column-count : 2;
+}
+
+
+// BACKGROUND COLOR
+.u-bgc-red {
+  background-color : $color-red;
+
+  &:hover {
+    background-color : lighten($color-red, 15%);
+  }
+}
+
+.u-bgc-green {
+  background-color : $color-green;
+
+  &:hover {
+    background-color : lighten($color-green, 15%);
+  }
+}
+
+.u-bgc-blue {
+  background-color : $color-blue;
+
+  &:hover {
+    background-color : lighten($color-blue, 15%);
+  }
+}
+
+.u-bgc-yellow {
+  background-color : $color-yellow;
+
+  &:hover {
+    background-color : lighten($color-yellow, 15%);
+  }
+}
+
+.u-bgc-pink {
+  background-color : $color-pink;
+
+  &:hover {
+    background-color : lighten($color-pink, 15%);
+  }
+}
+
+
+

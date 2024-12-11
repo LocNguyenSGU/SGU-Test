@@ -1,0 +1,58 @@
+@mixin container($padding-top, $padding-bottom) {
+  padding : $padding-top 7.5% $padding-bottom;
+
+  @media screen and (max-width : 25em) {
+    padding : $padding-top 5% $padding-bottom;
+  }
+}
+
+@mixin centralize {
+  position  : absolute;
+  top       : 50%;
+  left      : 50%;
+  transform : translate(-50%, -50%);
+}
+
+@mixin sub-heading($color, $bgcolor) {
+  color            : $color;
+  background-color : $bgcolor;
+  font-size        : $size-extremely-small;
+  font-weight      : 600;
+  text-transform   : uppercase;
+  display          : inline-block;
+  padding          : .2rem .6rem;
+  border-radius    : .2rem;
+  letter-spacing   : .1rem;
+
+  transform        : scale(1) skewX(0);
+  transition       : all .3s ease-in-out;
+
+  &:hover {
+    background-color : transparentize($bgcolor, .75);
+    transform        : scale(1.2) skewX(7deg);
+  }
+}
+
+$breakpoints : (
+        small-phone: 360px,
+        phone: 480px,
+        tablet: 768px,
+        desktop: 1024px,
+        big-desktop: 1400px
+);
+
+@mixin for-size($breakpoint, $direction: down) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    $breakpoint-value : map-get($breakpoints, $breakpoint);
+
+    @if $direction == up {
+      @media (min-width : $breakpoint-value) {
+        @content;
+      }
+    } @else if $direction == down {
+      @media (max-width : $breakpoint-value) {
+        @content;
+      }
+    }
+  }
+}

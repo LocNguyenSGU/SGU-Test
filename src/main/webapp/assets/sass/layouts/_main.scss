@@ -1,0 +1,16 @@
+.main {
+  position         : fixed;
+  top              : 0;
+  right            : 0;
+  width            : calc(100% - 30rem);
+  height           : 100vh;
+  padding          : $space-small;
+  transition       : all .3s;
+  overflow-y       : scroll;
+  background-color : #f0f0f0;
+
+  &__toggle {
+    width : calc(100% - 8rem);
+  }
+}
+

@@ -1,0 +1,121 @@
+@font-face {
+  font-family : "rem";
+  src         : url("../../font/REM-VariableFont_wght.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family : "rem2";
+  src         : url("../font/REM-VariableFont_wght.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family : "rem3";
+  src         : url("font/REM-VariableFont_wght.ttf") format("truetype");
+  font-display: swap;
+}
+
+body {
+  font-family : "rem", "rem2", "rem3", sans-serif;
+  font-size   : $size-medium;
+  font-weight : 300;
+  line-height : 1.4;
+  color       : $color-grey;
+}
+
+.heading-primary {
+  display             : block;
+  text-transform      : uppercase;
+  color               : $color-white;
+  text-align          : center;
+  backface-visibility : hidden;
+  font-size           : $size-very-large;
+  font-weight         : 700;
+  letter-spacing      : 4rem;
+
+  @media screen and (max-width : 50em) {
+    font-size      : $size-medium-large;
+    letter-spacing : 3rem;
+  }
+  @media screen and (max-width : 25em) {
+    font-size      : $size-medium;
+    letter-spacing : 2rem;
+  }
+}
+
+.heading-secondary {
+  display                 : inline-block;
+  font-size               : $size-medium-large;
+  font-weight             : 700;
+  letter-spacing          : 2px;
+  text-transform          : uppercase;
+  color                   : transparent;
+  text-align              : center;
+  text-shadow             : .1rem .1rem .5rem rgba($color-secondary, .3);
+  transition              : all .2s ease-in-out;
+
+  background-image        : linear-gradient(to right, $color-secondary-shade-1, $color-secondary);
+  background-clip         : text;
+  -webkit-background-clip : text;
+
+  &:hover {
+    transform   : skew(15deg, 2deg) scale(1.2);
+    text-shadow : .5rem 1rem 2rem rgba($color-black, .3);
+  }
+
+  @media screen and (max-width : 50em) {
+    font-size : $size-medium;
+  }
+  @media screen and (max-width : 25em) {
+    font-size      : $size-medium-small;
+    letter-spacing : 1px;
+    line-height    : 1.2;
+  }
+}
+
+.heading-tertiary {
+  font-size      : $size-medium-small;
+  font-weight    : 600;
+  text-transform : uppercase;
+  color          : $color-white;
+  white-space    : nowrap;
+
+  @media screen and (max-width : 25em) {
+    font-size      : $size-small;
+    letter-spacing : 0;
+  }
+}
+
+
+/*.sub-heading {
+  display: block;
+  color: $color-white;
+  text-align: center;
+  backface-visibility: hidden;
+  font-size: $size-medium;
+  font-weight: 400;
+  letter-spacing: 1rem;
+
+  @media screen and (max-width: 50em) {
+    font-size: $size-medium-small;
+    letter-spacing: .6rem;
+  }
+  @media screen and (max-width: 25em) {
+    font-size: $size-small;
+    letter-spacing: .3rem;
+  }
+}*/
+
+.paragraph {
+  font-size   : $size-small;
+  line-height : 1.6;
+
+  &:not(:last-of-type) {
+    margin-bottom : $space-medium-small;
+  }
+}
+
+.beautiful {
+  text-shadow : 1px 4px 8px rgba($color-secondary, .5);
+  color       : $color-white;
+  font-weight : 700;
+}

@@ -1,0 +1,32 @@
+.info {
+  width: 70%;
+  margin: $space-very-large auto;
+  font-size: $size-medium-small;
+  gap: $space-large;
+
+  &__article {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    p {
+      display: inline-block;
+    }
+
+    i {
+      font-size: $space-medium-small;
+      color: $color-secondary;
+      transform: translateY(.4rem);
+    }
+  }
+
+  &__figure {
+    img {
+      height: 18rem;
+      aspect-ratio: 1 / 1;
+      border-radius: .4rem;
+    }
+
+  }
+}

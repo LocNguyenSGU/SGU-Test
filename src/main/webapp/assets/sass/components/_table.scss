@@ -1,0 +1,100 @@
+.table {
+  display         : table;
+  border-collapse : collapse;
+  box-shadow      : 10px 10px 20px rgba($color-black, 0.15);
+  font-size       : $size-small;
+  border-radius   : 4px;
+  overflow        : hidden;
+}
+
+.thead {
+  display       : table-header-group;
+  color         : $color-white;
+  background    : linear-gradient(100deg, $color-secondary-shade-1, $color-secondary);
+  border-bottom : .1rem solid rgba($color-grey-dark, .7);
+}
+
+.tbody {
+  display : table-row-group;
+
+  .tr:nth-of-type(odd) {
+    background-color : $color-white;
+  }
+
+  .tr:nth-of-type(even) {
+    background-color : transparentize($color-secondary-tint-2, .5);
+  }
+
+  .tr:hover {
+    background-color : $color-primary-tint-2;
+
+    .td:hover {
+      box-shadow : inset 2px 2px 10px rgba($color-primary, 0.15);
+    }
+  }
+}
+
+.tr {
+  display : table-row;
+}
+
+.th, .td {
+  display        : table-cell;
+  text-align     : center;
+  vertical-align : middle;
+  padding        : $space-extremely-small;
+  line-height    : 1.5;
+
+  &:nth-of-type(4n + 1) {
+    width : 5%;
+  }
+
+  &:nth-of-type(4n + 2) {
+    width : 15%;
+  }
+
+  &:nth-of-type(4n + 3) {
+    width : 65%;
+  }
+
+  &:nth-of-type(4n) {
+    width : 15%;
+  }
+}
+
+.th {
+  font-weight : 400;
+}
+
+.td {
+  text-overflow : ellipsis;
+
+  a {
+    display : inline-block;
+    cursor  : pointer;
+
+    &:not(:last-of-type) {
+      margin-right : $space-extremely-small;
+    }
+  }
+
+  i {
+    font-size : $size-medium-large;
+  }
+
+  .bx-show {
+    color : #ffbe00;
+  }
+
+  .bx-edit {
+    color : #0a9396;
+  }
+
+  .bx-trash {
+    color : #d62828;
+  }
+
+  .bx-stats {
+    color : #fb6f92;
+  }
+}

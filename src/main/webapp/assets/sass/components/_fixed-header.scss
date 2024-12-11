@@ -1,0 +1,47 @@
+.fixed-header {
+  position         : fixed;
+  top              : 0;
+  left             : 0;
+
+  display          : flex;
+  flex-flow        : row nowrap;
+  justify-content  : space-between;
+  align-items      : center;
+
+  height           : 6rem;
+  width            : 100%;
+  padding          : .5rem 5%;
+  background-color : $color-white;
+  box-shadow       : 0 .5rem 1rem rgba($color-black, .1);
+  z-index          : 10;
+
+
+  &__title {
+    display                 : inline-block;
+    font-size               : $size-medium-large;
+    font-weight             : 500;
+    letter-spacing          : .2rem;
+    color                   : transparent;
+    text-shadow             : .1rem .1rem .5rem rgba($color-secondary, .3);
+    transition              : all .2s ease-in-out;
+
+    background-image        : linear-gradient(to right, $color-secondary-shade-1, $color-secondary);
+    background-clip         : text;
+    -webkit-background-clip : text;
+
+    &:hover {
+      transform   : skew(15deg, 2deg) scale(1.2);
+      text-shadow : .5rem 1rem 2rem rgba($color-black, .3);
+    }
+  }
+
+  &__icon {
+    font-size : $size-medium-large;
+    color     : $color-grey;
+
+    &:hover {
+      color : $color-secondary;
+    }
+  }
+}
+

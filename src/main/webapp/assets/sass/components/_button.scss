@@ -1,0 +1,94 @@
+.btn-text {
+  &:link, &:visited {
+    color            : $color-secondary-shade-1;
+    background-color : transparent;
+    font-size        : $size-small;
+    font-weight      : 400;
+    text-decoration  : none;
+
+    display          : inline-block;
+    padding          : #{$space-extremely-small / 3} $space-extremely-small;
+    border           : none;
+    border-bottom    : 1px solid $color-secondary-shade-1;
+
+    transition       : all .3s ease-in-out;
+  }
+
+  &:hover, &:active {
+    color            : $color-white;
+    background-color : $color-secondary-shade-1;
+    border-bottom    : 1px solid transparent;
+    box-shadow       : 0 1rem 2rem rgba($color-black, .15);
+
+    transform        : translateY(-.3rem);
+  }
+}
+
+.btn-animated {
+  &:link, &:visited {
+    color            : $color-secondary-shade-1;
+    background-color : $color-secondary-tint-2;
+    font-size        : $size-small;
+    font-weight      : 400;
+    text-decoration  : none;
+
+    box-sizing       : border-box;
+    display          : inline-block;
+    padding          : $space-very-small $space-medium-small;
+    border           : 2px solid $color-secondary-shade-1;
+    outline          : none;
+  }
+
+  &:hover, &:active {
+    box-shadow : -.3rem .3rem $color-secondary-shade-1;
+    transform  : translate(.5rem, -.5rem);
+  }
+}
+
+.btn-normal {
+  &, &:link, &:visited {
+    font-size       : $size-small;
+    text-decoration : none;
+
+    display         : inline-block;
+    padding         : $space-very-small $space-medium-small;
+    border-radius   : .2rem;
+    border          : none;
+    outline         : none;
+
+    transition      : all .3s ease-in-out;
+  }
+
+  &:hover, &:active {
+    box-shadow : 0 1rem 2rem rgba($color-black, .15);
+    transform  : translateY(-.3rem);
+  }
+
+  &--main {
+    &:link, &:visited {
+      color       : $color-white;
+      background  : linear-gradient(100deg, $color-secondary-shade-1, $color-secondary);
+      font-weight : 500;
+      outline     : 1px solid transparent;
+    }
+
+    &:hover, &:active {
+      background : linear-gradient(100deg, lighten($color-secondary-shade-1, 15%),
+              lighten($color-secondary, 15%));
+    }
+  }
+
+  &--sub {
+    &:link, &:visited {
+      color       : $color-secondary-shade-1;
+      background  : linear-gradient(100deg, $color-white, $color-secondary-tint-2);
+      font-weight : 400;
+      outline     : 1px solid $color-secondary;
+    }
+
+    &:hover, &:active {
+      background : linear-gradient(100deg, lighten($color-white, 15%),
+              lighten($color-secondary-tint-2, 15%));
+    }
+  }
+}

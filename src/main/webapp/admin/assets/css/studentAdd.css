@@ -1,0 +1,145 @@
+*{
+font-family:"Ubuntu", sans-serif;
+}
+
+.create_student_input{
+    width: 50%;
+      height: 35px;
+      padding: 5px 20px 5px 20px;
+      font-size: 20px;
+      outline: none;
+      border: 1px solid #474738;
+      border-radius: 6px;
+}
+#name {
+    width: 50%;
+    height: 35px;
+    padding: 5px 20px 5px 20px;
+    font-size: 20px;
+    outline: none;
+    border: 1px solid #474738;
+    border-radius: 6px;
+  }
+  .form-add-exam {
+    margin-top: 20px;
+  }
+  .Major_select{
+  border-radius:10px;
+  border: 1px solid #474738;
+  outline: none;
+  }
+  #description {
+    width: 80%;
+    height: 300px;
+    padding: 5px 20px 5px 20px;
+    font-size: 20px;
+      outline: none;
+      border: 1px solid #474738;
+    border-radius: 6px;
+
+  }
+
+  .btn-add {
+    margin-top: 20px;
+      width: 100px;
+      height: 40px;
+      background-color: #2a2185;
+      font-size: 20px;
+      font-weight: 500;
+      color: #fff;
+      cursor: pointer;
+  }
+  .btn_filter {
+    margin-top: 20px;
+      width: 100px;
+      height: 40px;
+      background-color: #2a2185;
+      font-size: 20px;
+      font-weight: 500;
+      color: #fff;
+      cursor: pointer;
+
+  }
+  .btn-add_2 {
+    width: 130px;
+    height: 40px;
+      background-color: #2a2185;
+      font-size: 20px;
+      font-weight: 500;
+      color: #fff;
+      cursor: pointer;
+  }
+  .group-btn {
+    display: flex;
+    align-items: center;
+    /* justify-content: space-around; */
+    gap: 40px;
+    margin-top: 20px;
+  }
+  .form-group {
+    margin-top: 20px;
+  }
+  #dateStart, #dateEnd {
+    width: 168px;
+    height: 30px;
+    font-size: 18px;
+  }
+  /* Increase the size of the date picker */
+input[type="date"]::-webkit-calendar-picker-indicator {
+    padding: 1.4rem; /* Adjust the padding as needed */
+    font-size: 18px;
+    /* Optionally, you can also adjust other properties such as width and height */
+}
+.pagination {
+    display: flex;
+    gap: 4px;
+    justify-content: center;
+    align-items: center;
+  }
+.pagination li {
+  border-radius: 3px;
+  border: 1px solid #333;
+  padding: 6px;
+  list-style-type: none;
+}
+.pagination a {
+  text-decoration: none;
+  cursor: pointer;
+}
+.pagination li.active {
+  background-color: #2a2185;
+  color: #fff;
+}
+.filter_status {
+    margin-bottom: 20px;
+}
+.form_filter_status {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.form-group #status{
+     width: 168px;
+     height: 27px;
+     font-size: 16px;
+}
+
+.lb-IN_PROGRESS {
+  padding: 5px 10px;
+  border-radius: 10px;
+  background-color:  #66CC66;
+}
+.lb-COMPLETED {
+  padding: 5px 10px;
+  border-radius: 10px;
+  background-color:  #3399FF;
+}
+.lb-NOT_STARTED {
+  padding: 5px 10px;
+  border-radius: 10px;
+  background-color: #ccc;
+}
+.btn-edit-exam {
+  width: 120px;
+  margin-top: 0;
+}

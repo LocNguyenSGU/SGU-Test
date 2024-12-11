@@ -1,0 +1,61 @@
+#name {
+  width: 80%;
+  height: 35px;
+  padding: 5px 20px 5px 20px;
+  font-size: 20px;
+  outline: none;
+  border: 1px solid #474738;
+  border-radius: 6px;
+}
+.form-add-major {
+  margin-top: 20px;
+}
+#description {
+  width: 80%;
+  height: 300px;
+  padding: 5px 20px 5px 20px;
+  font-size: 20px;
+    outline: none;
+    border: 1px solid #474738;
+  border-radius: 6px;
+
+}
+.btn-add {
+    width: auto;
+    height: 40px;
+    background-color: #2a2185;
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+    cursor: pointer;
+}
+.group-btn {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.form-group {
+  margin-bottom: 10px;
+}
+.pagination {
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+  align-items: center;
+}
+.pagination li {
+  cursor: pointer;
+  border-radius: 3px;
+  border: 1px solid #333;
+  padding: 6px;
+  list-style-type: none;
+}
+.pagination a {
+  text-decoration: none;
+  cursor: pointer;
+}
+.pagination li.active {
+  background-color: #2a2185;
+  color: #fff;
+}

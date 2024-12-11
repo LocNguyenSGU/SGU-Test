@@ -1,0 +1,62 @@
+:root {
+  --blue: #2a2185;
+  --white: #fff;
+  --gray: #f5f5f5;
+  --cian:#c7c2ff;
+  --black1: #222;
+  --black2: #999;
+}
+.containerForm{
+    display:flex;
+    padding-top:2px;
+    justify-content:center;
+    background-color:var(--cian);
+    height:100vh;
+    overflow-y:scroll;
+}
+.containerFormInside{
+    display:block;
+}
+.containerFormInsidePoint{
+    border-radius:10px;
+    margin-top:10px;
+    padding:20px;
+    background-color:white;
+    display:flex;
+    justify-content:space-between;
+}
+.containerFormInsideTitle{
+    height:20%;
+    padding:20px;
+    background-color:white;
+    border-radius:10px;
+    border-top:10px solid var(--blue);
+}
+.containerFormInsideQuestion{
+    border-radius:10px;
+    margin-top:10px;
+    padding:20px;
+    background-color:white;
+}
+.divOption{
+    display:flex;
+    gap:10px;
+    align-items:center;
+}
+.question{
+    padding:5px;
+}
+.option{
+    margin-top:10px;
+    margin-bottom:10px;
+}
+input[type="radio"]{
+    width:20px;
+    height:20px;
+    background-color:grey;
+}
+.custom-radio input[type="radio"]:checked + label {
+    background-color: #0066FF; /* Màu nền của ô radio khi được chọn */
+    border-color: #0066FF; /* Màu viền của ô radio khi được chọn */
+    color: #fff; /* Màu chữ của nhãn khi ô radio được chọn */
+}

@@ -1,0 +1,226 @@
+.question {
+  display        : flex;
+  flex-direction : column;
+  gap            : $space-large;
+
+  &__header {
+    text-align : center;
+  }
+
+  &__content {
+    border-radius : .4rem;
+    box-shadow    : 0 0 1rem 0 rgba($color-black, 0.05);
+    position      : relative;
+    display       : flex;
+    flex-flow     : row nowrap;
+    gap           : $space-large;
+
+    &--bg {
+      position              : absolute;
+      top                   : 0;
+      left                  : 0;
+      width                 : 100%;
+      height                : 100%;
+      z-index               : -1;
+
+      background-image      : linear-gradient(100deg,
+              rgba($color-secondary-shade-1, .95) 0%,
+              rgba($color-secondary-shade-1, .25) 50%,
+              rgba($color-secondary-tint-2, .5) 50%,
+              $color-secondary-tint-2 100%),
+      url(doing-test.webp);
+      background-size       : cover;
+      background-position-x : left;
+      background-position-y : top;
+      filter                : drop-shadow(0 1rem 2rem rgba($color-black, .1)) grayscale(.25);
+    }
+
+    &--left, &--right {
+      width           : 50%;
+      padding         : $space-very-small $space-medium;
+      display         : flex;
+      flex-flow       : column nowrap;
+      justify-content : flex-start;
+      align-items     : flex-start;
+      gap             : $space-medium-large;
+    }
+
+    &--left {
+      &--header {
+        @include sub-heading($color-white, transparentize($color-secondary-shade-2, .25));
+      }
+
+      &--body {
+        width       : 100%;
+        font-weight : 400;
+        color       : $color-white;
+        line-height: 1.5;
+        text-shadow : 0 0 .5rem rgba(#720026, .15);
+      }
+
+      &--footer {
+        margin-top      : auto;
+
+        display         : inline-flex;
+        justify-content : flex-start;
+        align-items     : center;
+        gap             : $space-extremely-small;
+      }
+
+      &--info {
+        transform  : rotate(2deg) skewY(2deg) !important;
+        transition : all .4s ease-in-out !important;
+
+        &:nth-child(1) {
+          @include sub-heading($color-grey-dark, rgba(#abff8e, .75));
+        }
+
+        &:nth-child(2) {
+          @include sub-heading($color-grey-dark, rgba(#eddd77, .75));
+        }
+
+        &:nth-child(3) {
+          @include sub-heading($color-grey-dark, rgba(#eac4ff, .75));
+        }
+      }
+
+      &--footer:hover &--info:not(:hover) {
+        color            : $color-white;
+        background-color : transparent !important;
+      }
+
+      &--footer:hover &--info:hover {
+        color            : $color-secondary-shade-2;
+        background-color : rgba($color-white, .85) !important;
+        transform        : rotate(0) skew(0) scale(1.05) !important;
+      }
+
+      .couple-select-input {
+        display         : flex;
+        justify-content : space-around;
+        align-items     : center;
+
+        label, select, input[type="range"] {
+          display     : inline-block;
+          width       : 50%;
+          font-size   : $size-medium-small;
+          font-weight : 300;
+          color       : $color-grey-dark;
+          cursor      : pointer;
+
+          &:active, &:focus, &:focus-within {
+            outline : 2px solid rgba($color-secondary, .5);
+          }
+        }
+
+        select, input[type="range"] {
+          text-align : center;
+          border     : none;
+          outline    : none;
+          background : rgba($color-white, .5);
+          transition : border-color .3s;
+        }
+      }
+
+      textarea {
+        display       : block;
+        resize        : none;
+        width         : 100%;
+        padding       : #{$space-small / 2} $space-small;
+        background    : rgba($color-white, .5);
+        line-height   : 1.2;
+
+        outline       : none;
+        border        : none;
+        border-radius : .2rem;
+        height        : 9rem;
+        text-align    : left;
+
+        &:focus {
+          outline : 2px solid $color-secondary;
+        }
+      }
+    }
+
+    &--right {
+      background : inherit;
+      padding-bottom: $space-medium;
+
+      &--header {
+        @include sub-heading($color-secondary-shade-2, transparentize($color-white, .25));
+      }
+    }
+
+    &.editing {
+      box-shadow : none;
+
+      .question__content--left {
+        background : linear-gradient(100deg, rgba($color-secondary-tint-1, .75),
+                rgba($color-secondary-tint-2, .25));
+        box-shadow : 0 1rem 2rem rgba($color-secondary, .15);
+        transform  : skewX(-5deg) translateX(2rem);
+
+        & > * {
+          transform : skewX(5deg);
+        }
+      }
+
+      .question__content--right {
+        border           : .2rem solid $color-secondary-tint-1;
+        transform        : skewX(-5deg) translateX(-2rem);
+        background-image : linear-gradient(100deg, $color-white 0%,
+                rgba($color-white, .1) 70%, rgba($color-secondary-tint-1, .25) 100%);
+        box-shadow       : 0 1rem 2rem rgba($color-black, .15);
+
+        & > * {
+          transform : skewX(5deg);
+        }
+      }
+    }
+  }
+
+  &__option-list {
+    display   : flex;
+    flex-flow : column nowrap;
+    gap       : $space-small;
+    font-size : $size-medium-small;
+    font-weight: 400;
+  }
+
+  &__option-item {
+    display     : flex;
+    gap         : $space-very-small;
+    line-height : 1.2;
+
+    label {
+      width : 100%;
+    }
+
+    input[type="radio"] {
+      transform : scale(1.5);
+      height    : 2rem;
+    }
+
+    input[type="radio"]:checked {
+      accent-color : $color-primary;
+
+      & + label {
+        color       : $color-primary-shade-1;
+        text-shadow : 0 0 .5rem rgba($color-primary, .5);
+
+        &:active, &:focus, &:focus-within {
+          outline : $color-primary 2px solid;
+        }
+      }
+    }
+
+    label, input[type="radio"] {
+      cursor : pointer;
+
+      &:active, &:hover {
+        outline : 2px solid $color-secondary;
+      }
+    }
+  }
+
+}

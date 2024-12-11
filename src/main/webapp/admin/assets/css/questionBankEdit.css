@@ -1,0 +1,160 @@
+.cardHeader .body-edit .sub-body-edit {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+.details .cardHeader {
+  display: block;
+}
+textarea {
+  outline: none;
+  border-radius: 10px;
+  padding: 10px;
+  width: 500px;
+  height: 120px;
+  border: 1px solid #333;
+  overflow: auto;
+  margin-top: 10px;
+  font-size: 16px;
+}
+.list-option {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+}
+.list-option .option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: space-between;
+}
+.list-option .option .group {
+  width: 79%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.list-option .option label {
+  display: inline-block;
+  cursor: pointer;
+  padding: 5px;
+  width: 100%;
+}
+.list-option .option:hover label {
+  outline: 2px solid #2a2185;
+  cursor: pointer;
+  border-radius: 3px;
+}
+.list-option .option {
+  padding: 5px;
+  margin-top: 10px;
+  font-size: 15px;
+  cursor: pointer;
+}
+.list-option input[type="radio"] {
+  transform: scale(1.5);
+}
+.list-option input[type="radio"]:checked {
+  transform: scale(1.5);
+  accent-color: #44bd32;
+}
+.list-option input[type="radio"]:active {
+  outline: none;
+}
+.list-option input[type="radio"]:checked + label {
+  color: #308423;
+  text-shadow: 0 0 0.5rem rgba(68, 189, 50, 0.5);
+}
+
+.detailQuestion_subbody {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+#subject-name-edit,
+#level-name-edit {
+  font-size: 16px;
+  width: 200px;
+  height: 30px;
+  padding: 4px;
+  border-radius: 3px;
+}
+.bold {
+  font-weight: 600;
+  color: #202020;
+}
+.btn-delete-edit {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s;
+}
+.btn-delete-edit .fa-solid {
+  color: #5f6368;
+  font-size: 16px;
+}
+.btn-delete-edit:hover {
+  background-color: #dfdfdf;
+}
+.btn-delete-edit:hover::before {
+  border-radius: 2px;
+  color: #ffffff;
+  padding: 3px 5px;
+  background-color: rgb(93, 85, 85);
+  display: flex;
+  content: "Xoá";
+  position: absolute;
+  top: 35px;
+  left: 0px;
+}
+.add-option-edit {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 14px;
+    color: #333;
+    margin-left: 5px;
+}
+.btn-add-option {
+    background-color: #fff;
+    color: #333;
+    outline: none;
+    border: none;
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.btn-add-option i {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    background-color: #dfdfdf;
+    border-radius: 50%;
+    transition: all 0.3s;
+}
+.btn-add-option:hover i {
+    width: 30px;
+    height: 30px;
+    background-color: #888686;
+    border-radius: 50%;
+}
+.edit-question a {
+    margin-left: 10px;
+}
+.btn-excel {
+    background-color: #04723a;
+    color: #fff;
+    padding: 8px 12px;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+}
