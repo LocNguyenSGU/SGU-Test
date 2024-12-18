@@ -7,7 +7,7 @@ public class MysqlConfig {
     public static final String url = "jdbc:mysql://localhost:3306/Quan_Ly_Thi_Trac_Nghiem";
     public static final String username ="root";
 
-    public static final String password = "new_password";
+    public static final String password = "your_password_here";
 
     public static Connection getConnection(){
         Connection connection = null;
